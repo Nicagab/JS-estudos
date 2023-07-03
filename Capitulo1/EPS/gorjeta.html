@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorjeta e valor total a pagar</title>
+</head>
+<body>
+    <script>
+        var valor = prompt("Digite o valor do jantar:")//entrada
+
+        var gorjeta = Number(valor)*0.1;
+        var total = Number(valor)+gorjeta;//processamento
+
+        alert(`Valor do jantar: R$${valor}\n
+               Taxa do garçom: R$${gorjeta}\n
+               Total a pagar: R$${total}
+        `)
+    </script>
+</body>
+</html>

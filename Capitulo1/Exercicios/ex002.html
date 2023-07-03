@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividir conta</title>
+</head>
+<body>
+    <script>
+        var conta = prompt("Digite o valor da conta:");
+        var clientes = prompt("Nº de clientes:")
+
+        var valorpc = Number(conta)/Number(clientes);
+
+        alert(`Valor da conta: R$${Number(conta).toFixed(2)}\n Nº de clientes: ${clientes}\n Valor por cliente: R$${valorpc.toFixed(2)}`);
+
+    </script>
+</body>
+</html>
