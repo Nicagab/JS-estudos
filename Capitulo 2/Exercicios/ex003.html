@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promoção 50% de desconto</title>
+</head>
+<body>
+    <h1>Supermercado</h1>
+    <p>Nome produto:<input type="text" id="nome"></p>
+    <p>Preço unitário: (R$) <input type="text" id="preçoU"></p>
+    <input type="button" value="Desconto" id="btnCalcular">
+    <p id="respNome"></p>
+    <p id="respPreço"></p>
+    <script>
+        function promoção(){
+            var nome = document.getElementById("nome").value
+            var preçoU = Number(document.getElementById("preçoU").value)
+            var respNome = document.getElementById("respNome")
+            var respPreço = document.getElementById("respPreço")
+
+            var desconto = preçoU/2
+            var total = preçoU*2+desconto
+
+            respNome.textContent = nome + " - Promoção leve 3 por apenas R$" + total.toFixed(2)
+            respPreço.textContent = "Nessa promoção a 3 unidade sai por apenas R$" + desconto.toFixed(2)
+        }
+        var btnCalcular = document.getElementById("btnCalcular")
+        btnCalcular.addEventListener("click", promoção)
+    </script>
+</body>
+</html>

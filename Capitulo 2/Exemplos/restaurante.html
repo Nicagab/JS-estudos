@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor a pagar - gramas para quilos</title>
+</head>
+<body>
+    <h1>Restaurante</h1>
+    <p>Buffet por quilo R$:<input type="text" id="preço"></p>
+    <p>Consumo (gr): <input type="text" id="gramas"></p>
+    <input type="button" value="Calcular" id="btnCalcular">
+    <p id="resp"></p>
+
+    <script>
+        function calcular(){
+        var preço = Number(document.getElementById("preço").value)
+        var gramas = Number(document.getElementById("gramas").value)
+        var resp = document.getElementById("resp")
+
+        var valor = preço*(gramas/1000)
+
+        resp.textContent = "Valor a pagar: R$" + valor.toFixed(2)}
+
+        var btnCalcular = document.getElementById("btnCalcular")
+        btnCalcular.addEventListener("click",calcular)
+    </script>
+</body>
+</html>

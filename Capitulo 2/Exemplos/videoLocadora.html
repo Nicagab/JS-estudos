@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão minutos - horas</title>
+</head>
+<body>
+    <h1>Vídeo Locadora</h1>
+    <p>Nome: <input type="text" name="nome" id="nome"></p>
+    <p>Duração (min): <input type="text" name="tempo" id="tempo"></p>
+    <input type="button" value="Converter" id="Converter">
+    <p id="respNome"></p>
+    <p id="respTempo"></p>
+    <script>
+        function converter() {
+        var nome = document.getElementById("nome").value;
+        var tempo = Number(document.getElementById("tempo").value);
+        var respNome = document.getElementById("respNome")
+        var respTempo = document.getElementById("respTempo")
+
+        var horas = Math.floor(tempo/60)
+        var min = tempo % 60;
+
+        respNome.textContent = nome;
+        respTempo.textContent = horas + " hora(s) " + min + " minuto(s)"
+    }
+    var btnConverter = document.getElementById("Converter")
+    btnConverter.addEventListener("click", converter)
+    </script>
+</body>
+</html>

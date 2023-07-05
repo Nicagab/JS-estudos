@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integração com HTML</title>
+</head>
+<body>
+    <h1>Programa Olá você</h1>
+    <p>Nome: <input type="text" name="nome" id="nome">
+    <input type="button" value="mostrar" id="mostrar"></p> 
+    <p id="resposta"></p>
+    <script>
+        function mostrarOla(){
+        var nome = document.getElementById("nome").value;
+        document.getElementById("resposta").textContent = "Olá " + nome
+    }
+    var mostrar = document.getElementById("mostrar");
+    mostrar.addEventListener("click", mostrarOla);
+    </script>
+</body>
+</html>

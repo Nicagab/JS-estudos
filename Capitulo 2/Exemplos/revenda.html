@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenda de veículos</title>
+</head>
+<body>
+    <h1>Revenda de veículos</h1>
+    <p>Modelo: <input type="text" id="modelo"></p>
+    <p>Preço: <input type="text" id="preço"></p>
+    <input type="button" value="ver promoção" id="avaliar">
+    <p id="respModelo"></p>
+    <p id="entrada"></p>
+    <p id="parcelas"></p>
+    <script>
+        function revender(){
+        var modelo = document.getElementById("modelo").value;
+        var preço = Number(document.getElementById("preço").value);
+        var respModelo = document.getElementById("respModelo")
+        var respPreço = document.getElementById("entrada")
+        var respParcelas = document.getElementById("parcelas")
+
+        var entrada = preço/2;
+        var parcelas = (preço/2)/12;
+        
+        respModelo.textContent = "Modelo: " + modelo
+        respPreço.textContent = "R$" + entrada.toFixed(2)
+        respParcelas.textContent = "+12X R$" + parcelas.toFixed(2)}
+
+        var btnAvaliar = document.getElementById("avaliar")
+        btnAvaliar.addEventListener("click", revender)
+
+
+    </script>
+</body>
+</html>
