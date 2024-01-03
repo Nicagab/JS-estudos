@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas do mês</title>
+</head>
+<body>
+    <h1>Programa contas do mês</h1>
+    <p>Descrição da conta: <input type="text" id="inDescricao"></p>
+    <p>Valor: (R$) <input type="text" id="inValor"></p>
+    <input type="button" value="Registrar" id="btnRegistrar">
+    <pre id="resp"></pre>
+    <pre id="total"></pre>
+
+    <script>
+        var numContas = 0;
+        var valTotal = 0;
+
+        var resposta = "";
+
+        function Registrar() {
+            inDescricao = document.getElementById("inDescricao")
+            inValor = document.getElementById("inValor")
+            descricao = inDescricao.value
+            valor = Number(inValor.value)
+            resp = document.getElementById("resp")
+            total = document.getElementById("total")
+
+            if (descricao == "") {
+                alert("Adicione uma descrição a sua conta!")
+                inDescricao.focus()
+                return
+            }
+            if (valor == 0 || isNaN(valor)) {
+                alert("Digite um valor válido!")
+                inValor.focus()
+                return
+            }
+
+            numContas++;
+            valTotal = valTotal + valor
+
+            resposta = resposta + descricao + " - R$: " + valor.toFixed(2) + "\n";
+
+        resp.textContent = resposta + "--------------------------------";
+        total.textContent = numContas + " Conta(s) - Total R$: " + valTotal.toFixed(2);
+
+        inDescricao.value = "";
+        inValor.value = "";
+        inDescricao.focus();
+
+        }
+        var btnRegistrar = document.getElementById("btnRegistrar")
+        btnRegistrar.addEventListener("click", Registrar)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiz quadrada exata</title>
+</head>
+<body>
+    <h1>Raiz quadrada exata</h1>
+    <p>Digite o número desejado: <input type="text" id="num"></p>
+    <input type="button" value="Calcular" id="btnCalcular">
+    <p id="resp"></p>
+
+    <script>
+        function calcular(){
+        var num = Number(document.getElementById("num").value)
+        var numF = document.getElementById("num")
+        var resp = document.getElementById("resp")
+        
+        if (num == "" || isNaN(num)){
+            alert("Digite corretamente um número")
+            numF.focus()
+            return
+        }
+
+        var raiz = Math.sqrt(num)
+
+        if (raiz == Math.floor(raiz)){
+            resp.textContent = `A raiz quadrada de ${num} é: ${raiz}`
+        } else {
+            resp.textContent = `Não existe raiz quadrada exata para ${num}`
+        }
+    }
+    var btnCalcular = document.getElementById("btnCalcular")
+    btnCalcular.addEventListener("click", calcular)
+    </script>
+</body>
+</html>

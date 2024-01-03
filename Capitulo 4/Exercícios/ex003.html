@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa números perfeitos</title>
+</head>
+<body>
+    <h1>Verificador de números perfeitos</h1>
+    <p>Número: <input type="text" id="inNum"></p>
+    <input type="button" value="Verificar" id="btnVerificar">
+    <p id="resp1"></p>
+    <p id="resp2"></p>
+
+    <script>
+        function verifica() {
+            var inNum = document.getElementById("inNum")
+            var num = Number(inNum.value)
+            var resp1 = document.getElementById("resp1")
+            var resp2 = document.getElementById("resp2")
+
+            var divs = 0
+            var resposta = ""
+
+            if (num == 0 || isNaN(num)){
+                alert("Digite um número válido")
+                inNum.focus()
+                return
+            }
+
+            for (let i = num-1; i > 0; i--) {
+                if(num%i == 0){
+                    divs = divs + i
+                    resposta = resposta + `,${i}`
+                }
+                if (num==divs){
+                    resp1.textContent = `Divisores do ${num}: ${resposta} (soma = ${divs})`
+                    resp2.textContent = num + " É um número perfeito"
+                } else {
+                    resp1.textContent = `Divisores do ${num}: ${resposta} (soma = ${divs})`
+                    resp2.textContent = num + " Não é um número perfeito"
+                }
+            }
+        }
+        var btnVerificar = document.getElementById("btnVerificar")
+        btnVerificar.addEventListener("click", verifica)
+    </script>
+</body>
+</html>

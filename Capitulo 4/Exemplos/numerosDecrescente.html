@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números decrescentes</title>
+</head>
+<body>
+    <h1>Números decrescentes</h1>
+    <p>Número: <input type="text" id="num"></p>
+    <input type="button" value="Decrescer até 1" id="decrescerBtn">
+    <p id="resp"></p>
+
+    <script>
+        function decrescer() {
+            var inNum = document.getElementById("num")
+            var num = Number(inNum.value)
+            var resp = document.getElementById("resp") 
+
+            if (num<=0 || isNaN(num)){
+                alert("Insira um número válido")
+                inNum.focus()
+                return
+            }
+
+            var resposta = `Entre o ${num} e  1: `
+
+            for (let i = num; i > 0;i--) {
+                if (i == 1) {
+                    resposta = resposta + i + ".";
+                    } else {
+                    resposta = resposta + i + ", ";
+                    }    
+            }
+            resp.textContent = resposta
+        }
+
+        var decrescerBtn = document.getElementById("decrescerBtn")
+        decrescerBtn.addEventListener("click", decrescer)
+    </script>
+</body>
+</html>

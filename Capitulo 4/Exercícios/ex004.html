@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábrica de estrelas</title>
+</head>
+<body>
+    <h1>Fábrica de estrelas</h1>
+    <p>Número de linhas: <input type="text" id="inNum"></p>
+    <input type="button" value="Fabricar" id="btnFabricar">
+    <p id="resp"></p>
+
+    <script>
+        function fabricar (){
+            var inNum = document.getElementById("inNum");
+            var num = Number(inNum.value);
+            var resp = document.getElementById("resp");
+            var resposta = "";
+            var estrelas = "";
+
+            if (num == 0 || isNaN(num)){
+                alert("Digite um número válido")
+                inNum.focus()
+                return
+            };
+
+            for (let i = 1; i <= num; i++) {
+                estrelas =  estrelas + "*"
+                resposta = resposta + `${estrelas} \n`
+            };
+
+            resp.textContent = resposta;
+        }
+
+        var btnFabricar = document.getElementById("btnFabricar");
+        btnFabricar.addEventListener("click", fabricar)
+    </script>
+</body>
+</html>

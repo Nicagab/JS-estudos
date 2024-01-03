@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuso Horário Brasil-Portugal</title> <!--originalmente Brasil-França-->
+</head>
+<body>
+    <h1>Horário em Portugal</h1>
+    <p>Horário Brasil: <input type="text" id="hBrasil"></p>
+    <input type="button" value="Calcular" id="btnCalcular">
+    <p id="resp"></p>
+
+    <script>
+        function calcular() {
+            var hBrasil = document.getElementById("hBrasil")
+            var hBrasilN = Number(document.getElementById("hBrasil").value)
+            var resp = document.getElementById("resp")
+
+            if(hBrasilN = "" | isNaN(hBrasilN)){
+                alert("Coloque um horário válido")
+                hBrasil.focus()
+                return
+            }
+
+            var hPortugal = hBrasilN+4
+
+            if (hPortugal>=24){
+                hPortugal = hPortugal-24
+            }
+
+            resp.textContent = `Agora são ${hPortugal.toFixed(2)}h em Portugal`
+        }
+        var btnCalcular = document.getElementById("btnCalcular")
+        btnCalcular.addEventListener("click", calcular)
+    </script>
+</body>
+</html>
