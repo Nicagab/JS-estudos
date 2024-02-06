@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimas notícias</title>
+</head>
+<body>
+    <h1>Programa Últimas Notícias</h1>
+    <p>
+        Notícias: <input type="text" id="inNoticia"> 
+        <input type="button" value="Adicionar" id="btnAdicionar">
+        <input type="button" value="Listar últimas notícias" id="btnListar">
+    </p>
+    <h3 id="outQtde">Notícias cadastradas: 0</h3>
+    <pre id="outLista"></pre>
+
+    <script>
+        var noticias = []
+
+        function adicionar (){
+            var inNoticia = document.getElementById("inNoticia")
+            var noticia = inNoticia.value
+
+            if(noticia == ""){
+                alert("Insira uma notícia válida")
+                inNoticia.focus()
+                return
+            }
+
+            noticias.push(noticia)
+
+            inNoticia.value = ""
+            inNoticia.focus()
+
+            document.getElementById("outQtde").textContent = `Notícias cadastradas: ${noticias.length}`
+        }
+        var btnAdicionar = document.getElementById("btnAdicionar")
+        btnAdicionar.addEventListener("click", adicionar)
+
+        function listar(){
+            if(noticias.length == 0){
+                alert("Não há notícias a serem listadas")
+                inNoticia.focus()
+                return
+            }
+
+            var lista = ""
+            var num = prompt("Digite a quantidade de notícias que deseja:")
+            var copia = noticias.slice()
+
+            for (let i = num; i > 0; i--) {
+                lista += `${copia.length}ª) ${copia.pop()} \n`
+            }
+
+            document.getElementById("outLista").textContent = lista
+        }
+        var btnListar = document.getElementById("btnListar")
+        btnListar.addEventListener("click", listar)
+
+    </script>
+</body>
+</html>

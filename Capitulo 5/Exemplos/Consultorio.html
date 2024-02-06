@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultório</title>
+</head>
+<body>
+    <h1>Consultório</h1>
+    <p>
+    Pacientes: <input type="text" id="inNome">
+    <input type="button" value="Adicionar" id="btnAdicionar">
+    <input type="button" value="Urgência" id="btnUrgencia">
+    <input type="button" value="Atender" id="btnAtender">
+    </p>
+    <h3>Atendendo: <span id="atendimento"></span></h3>
+    <pre id="inLista"></pre>
+
+    <script>
+        var pacientes = []
+
+        function adicionar() {
+
+            var inNome = document.getElementById("inNome")
+            nome = inNome.value
+            var lista = ""
+            var inLista = document.getElementById("inLista")
+
+            if (nome == ""){
+                alert("Insira um nome válido")
+                inNome.focus()
+                return
+            }
+
+            pacientes.push(nome)
+
+            for (let i = 0; i < pacientes.length; i++) {
+                lista += (i + 1) + "." + pacientes[i] + `\n`
+            }
+            inLista.textContent = lista
+
+            inNome.value = ""
+            inNome.focus();
+        }
+        var btnAdicionar = document.getElementById("btnAdicionar")
+        btnAdicionar.addEventListener("click", adicionar)
+
+        function urgencia(){
+            var inNome = document.getElementById("inNome")
+            nome = inNome.value
+            var lista = ""
+            var inLista = document.getElementById("inLista")
+
+            if (nome == ""){
+                alert("Insira um nome válido")
+                inNome.focus()
+                return
+            }
+
+            pacientes.unshift(nome)
+
+            for (let i = 0; i < pacientes.length; i++) {
+                lista += (i + 1) + "." + pacientes[i] + `\n`
+            }
+            inLista.textContent = lista
+
+            inNome.value = ""
+            inNome.focus();
+        }
+        var btnUrgencia = document.getElementById("btnUrgencia")
+        btnUrgencia.addEventListener("click", urgencia)
+
+        function atender (){
+            var lista = ""
+            var inLista = document.getElementById("inLista")
+            var atendimento = document.getElementById("atendimento")
+
+            atendimento.textContent = pacientes.shift()
+
+            for (let i = 0; i < pacientes.length; i++) {
+                lista += (i + 1) + "." + pacientes[i] + `\n`
+            }
+            inLista.textContent = lista
+
+            inNome.value = ""
+            inNome.focus();
+        }
+        var btnAtender = document.getElementById("btnAtender")
+        btnAtender.addEventListener("click", atender)
+    </script>
+</body>
+</html>
