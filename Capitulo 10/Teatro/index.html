@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-9">
+                <h1>Teatro municipal - Reserva de poltronas</h1>
+
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p>
+                            <label for="inPoltrona">Nº da poltrona</label>
+                            <input type="text" class="form-control" id="inPoltrona" autofocus>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <input type="button" value="Reservar"
+                        id="btnReservar" class="btn btn-primary">
+                        <input type="button" value="Confirmar Reserva"
+                        id="btnConfirmar" class="btn btn-danger">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>Legenda:</p>
+                        <p>
+                            <img src="poltrona.png" class="imgPoltrona"> Disponível
+                            <img src="reservada.png" class="margemEsq"> Reservada
+                            <img src="indisponível.png" class="margemEsq"> Ocupada
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12" id="divPalco">
+                        <p class="bg-primary text-white text-center">Palco do Teatro</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>  

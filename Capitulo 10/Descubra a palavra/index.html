@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Jogo Descubra a palavra</h1>
+
+                <a href="index.html" class="btn btn-primary">Cadastrar palavras</a>
+                <a href="lista.html" class="btn btn-success">Listar Palavras</a>
+                <a href="jogo.html" class="btn btn-danger">Iniciar Jogo</a>
+
+                <h2>Cadastrar palavras</h2>
+                <p>
+                    <label for="inPalavra">Palavra: </label>
+                    <input type="text" class="form-control" id="inPalavra" autofocus>
+                </p>
+                <p>
+                    <label for="inDica">Dica: </label>
+                    <input type="text" class="form-control" id="inDica">
+                </p>
+                <input type="button" value="Cadastrar"
+                class="btn btn-primary" id="btnCadastrar">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

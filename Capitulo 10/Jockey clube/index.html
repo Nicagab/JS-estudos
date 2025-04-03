@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Apostas Jockey</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+
+            <div class="col-sm-4">
+                <img src="jockeyClub.png" alt="Jockey Clube" class="imgProg">
+            </div>
+            <div class="col-sm-8">
+                <h1>Jockey Clube - Controle de apostas</h1>
+            
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                    <label for="inCavalo">Nº Cavalo:</label>
+                    <input type="text" class="form-control aDireita" id="inCavalo" autofocus>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5 id="outCavalo"></h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        <label for="inAposta">Aposta R$:</label>
+                        <input type="text" class="form-control aDireita" id="inAposta">
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <input type="button" value="Apostar"
+                    id="btnApostar" class="btn btn-primary margemSup">
+                    <input type="button" value="Ganhador"
+                    id="btnGanhador" class="btn btn-success margemSup">
+                    <input type="button" value="Novo Páreo"
+                    id="btnNovo" class="btn btn-danger margemSup">
+                </div>
+            </div>
+
+            <pre id="outApostas"></pre>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
