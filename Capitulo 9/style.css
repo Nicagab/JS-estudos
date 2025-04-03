@@ -1,0 +1,45 @@
+/* Exemplos */
+
+h1 { border-bottom-style: inset; }
+img.imgProg { max-width: 100%; }
+.tarefaSelecionada { color: red; font-style: italic; }
+.tarefaNormal { color: black; }
+img.moeda1_00 { height: 84px; width: 84px; margin-bottom: 5px; }
+img.moeda0_50 { height: 66px; width: 66px; margin-bottom: 5px; }
+img.moeda0_25 { height: 76px; width: 76px; margin-bottom: 5px; }
+img.moeda0_10 { height: 60px; width: 60px; margin-bottom: 5px; }
+.aDireita { text-align: right; }
+
+/* Exercicios */
+
+img.vela { height: 100px; width: 100px; margin-bottom: 5px; }
+._0{
+    color: red;
+}
+._1{
+    color: blue;
+}
+._2{
+    color: yellow;
+}
+._3{
+    color: green;
+}
+._4{
+    color: orange;
+}
+._5{
+    color: pink;
+}
+._6{
+    color: purple;
+}
+._7{
+    color: brown;
+}
+._8{
+    color: olive;
+}
+._9{
+    color: gray;
+}

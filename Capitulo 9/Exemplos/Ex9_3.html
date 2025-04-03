@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 9.3</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+                <h1>Meus filmes favoritos</h1>
+                <p>
+                    <label for="inTitulo">Título do filme:</label>
+                    <input type="text" class="form-control" id="inTitulo">
+                    <label for="inGenero">Gênero do filme:</label>
+                    <input type="text" class="form-control" id="inGenero">
+                </p>
+                <p class="aDireita">
+                    <input type="button" value="Adicionar"
+                    id="btnAdicionar" class="btn btn-primary">
+                </p>
+
+                <table class="table table-striped" id="tbFilmes">
+                    <tr>
+                        <th>Título</th>
+                        <th>Gênero</th>
+                        <label><th><input type="checkbox"  id="ckTodos">Todos</th></label>
+                    </tr>
+                </table>
+
+                <p class="aDireita">
+                    <input type="button" value="Excluir selecionados"
+                    class="btn btn-danger" id="btnExcluir">
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="Ex9_3.js"></script>
+</body>
+</html>

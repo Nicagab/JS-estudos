@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style>
+        .oculta{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa Veterinário</h1>
+    Valor: <input type="text" id="inValor"><br>
+    Possui convênio: <input type="radio" name="rb1" id="rbConvenio">Sim <input type="radio" name="rb1" id="rbNConvenio" checked> Não <br>
+    <p id="pConvenio" class="oculta">Convênio <select id="inConvenio">
+        <option value="Amigo dos animais">Amigo dos animais</option>
+        <option value="Saude animal">Saúde animal</option>
+    </select></p>
+    <input type="button" value="Calcular Desconto" id="btnCalcularDesconto">
+    <h3 id="outDesconto"></h3>
+    <h3 id="outTotal"></h3>
+    <script src="ex003.js"></script>
+</body>
+</html>

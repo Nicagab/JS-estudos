@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        .oculta{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizzaria - Controle de pedidos</h1>
+    <p>Item do Pedido:
+        <input type="radio" name="produto" id="rbPizza" checked autofocus>Pizza
+        <input type="radio" name="produto" id="rbBebida">Bebida
+        <span>Item: 
+            <select id="inPizza">
+            <option value="media">Pizza média</option>
+            <option value="grande">Pizza Grande</option>
+            <option value="familia">Pizza Família</option>
+            </select>
+            <select id="inBebida" class="oculta">
+                <option value="refri">Refrigerante litro</option>
+                <option value="suco">Jarra de suco</option>
+                <option value="agua">Água mineral</option>
+                </select>
+        </span>
+    </p>
+    <p>Detalhes do item:
+        <input type="text" id="inDetalhes">
+        <input type="button" value="Adicionar" id="btnAdicionar">
+    </p>
+    <pre id="outPedido"></pre>
+    <script src="Ex7_6.js"></script>
+</body>
+</html>
